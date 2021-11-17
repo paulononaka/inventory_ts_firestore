@@ -1,10 +1,10 @@
 {
   "name": "inventory-ts-firestore",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Simple sample of an API built with Node & NestJS & Cloud Firestore",
+  "author": "Paulo Henrique Nonaka",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "Apache license 2.0",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
