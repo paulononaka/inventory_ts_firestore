@@ -66,14 +66,14 @@ Ok!
 `POST /inventory` - To add or update item inventory in stock right now. Inventory accepts a list of one or more items. If the itemID already exists, the itemName and inventory will be updated. 
 
 ```
-[ { “itemID”: 12345,  “itemName”: “Fancy Dress”, “quantity”: 10} ]
+[ { "itemID": 12345,  "itemName": "Fancy Dress", "quantity": 10 } ]
 ```
 
 ```
-200
+201
 
 {
-  "statusCode" : 200,
+  "statusCode" : 201,
   "description": "OK"
 }
 ```
@@ -103,7 +103,7 @@ It will make sure there is sufficient inventory and, if so, it will deduct one i
 ```
 200
 
-{ “itemID”: 12345,  “itemName”: “Fancy Dress”, “quantity_sold”: 4}
+{ "itemID": 12345,  "itemName": "Fancy Dress", "quantity_sold": 4}
 ```
 
 `GET /show/[show_ID]` - Return a list of all items sold by show_id with the same information.
@@ -111,5 +111,5 @@ It will make sure there is sufficient inventory and, if so, it will deduct one i
 ```
 200
 
-[ { “itemID”: 12345,  “itemName”: “Fancy Dress”, “quantity_sold”: 4} ]
+[ { "itemID": 12345,  "itemName": "Fancy Dress", "quantity_sold": 4} ]
 ```
