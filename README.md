@@ -4,9 +4,12 @@
 </h2>
 <hr />
 
-  <p align="center">A simple <a href="http://nodejs.org" target="_blank">Node.js</a> sample built with <a href="https://nestjs.com/" target="_blank">NestJS</a> and <a href="https://firebase.google.com/products/firestore" target="_blank">Cloud Firestore</a>.</p>
-    <p align="center">
-<img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="License" />
+<p align="center">
+  A simple <a href="http://nodejs.org" target="_blank">Node.js</a> sample built with <a href="https://nestjs.com/" target="_blank">NestJS</a> and <a href="https://firebase.google.com/products/firestore" target="_blank">Cloud Firestore</a>.
+</p>
+
+<p align="center">
+  <a href="https://github.com/paulononaka/inventory_ts_firestore/actions/workflows/main.yml"><img alt="build-test status" src="https://github.com/paulononaka/inventory_ts_firestore/actions/workflows/main.yml/badge.svg"></a> 
   <a href="https://www.linkedin.com/in/paulononaka" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5"></a>
 </p>
 
