@@ -1,16 +1,13 @@
 import { Injectable } from '@nestjs/common';
 import * as admin from 'firebase-admin';
-import { InventoryDto } from './inventory.dtos';
-import { Inventory } from './inventory.models';
+import { ItemRequestDto } from './inventory.dtos';
+import { Item } from './inventory.models';
 
 @Injectable()
 export class InventoryService {
-  async save(inventoryDto: InventoryDto[]): Promise<any> {
+  async save(inventoryDto: ItemRequestDto[]): Promise<any> {
     inventoryDto.forEach(async (inventoryDto) => {
-      const inventory = new Inventory(
-        inventoryDto.itemName,
-        inventoryDto.quantity,
-      );
+      const inventory = new Item(inventoryDto.itemName, inventoryDto.quantity);
       await admin
         .firestore()
         .collection('inventory')

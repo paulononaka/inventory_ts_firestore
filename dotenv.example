@@ -1,0 +1,8 @@
+PRIVATE_KEY="..."
+PROJECT_ID="..."
+CLIENT_EMAIL="..."
+API_KEY="..."
+AUTH_DOMAIN="..."
+STORAGE_BUCKET="..."
+MESSAGING_SENDER_ID="..."
+APP_ID="..."

@@ -1,4 +1,4 @@
-export class Inventory {
+export class Item {
   itemName: string;
   quantity: number;
 

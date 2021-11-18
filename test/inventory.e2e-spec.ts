@@ -1,14 +1,14 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
-import * as admin from 'firebase-admin';
 import { AppModule } from '../src/app.module';
+import { mockFirebase } from './mock-firebase';
 
 describe('AppController (e2e)', () => {
   let app: INestApplication;
 
   beforeEach(async () => {
-    admin.initializeApp({});
+    mockFirebase();
 
     const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [AppModule],

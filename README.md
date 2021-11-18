@@ -82,10 +82,10 @@ Ok!
 It will make sure there is sufficient inventory and, if so, it will deduct one item. It will record the item as being sold on show show_ID and return a success code. If there isn't sufficient inventory, it will return an 409 http status code and a message indicating so.
 
 ```
-200
+201
 
 {
-  "statusCode" : 200,
+  "statusCode" : 201,
   "message": "Ok"
 }
 ```

@@ -1,4 +1,4 @@
-export class InventoryDto {
+export class ItemRequestDto {
   itemID: string;
   itemName: string;
   quantity: number;
