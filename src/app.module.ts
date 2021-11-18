@@ -8,4 +8,4 @@ import { InventoryService } from './inventory/inventory.service';
   controllers: [AppController, InventoryController],
   providers: [InventoryService],
 })
-export class AppModule { }
+export class AppModule {}

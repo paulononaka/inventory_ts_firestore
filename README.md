@@ -74,7 +74,7 @@ Ok!
 
 {
   "statusCode" : 201,
-  "description": "OK"
+  "message": "Ok"
 }
 ```
 
@@ -86,7 +86,7 @@ It will make sure there is sufficient inventory and, if so, it will deduct one i
 
 {
   "statusCode" : 200,
-  "description": "OK"
+  "message": "Ok"
 }
 ```
 ```
@@ -94,7 +94,7 @@ It will make sure there is sufficient inventory and, if so, it will deduct one i
 
 {
   "statusCode" : 409,
-  "description": "Item is no longer in stock"
+  "error": "Item is no longer in stock"
 }
 ```
 
