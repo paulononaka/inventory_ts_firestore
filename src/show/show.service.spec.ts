@@ -11,7 +11,7 @@ mockQueryResponse.mockResolvedValue({
 
 const soldItem = {
   data: jest.fn(() => ({
-    item: { get: mockQueryResponse },
+    itemRef: { get: mockQueryResponse },
     quantitySold: 10,
   })),
 };

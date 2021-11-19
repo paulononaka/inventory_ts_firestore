@@ -1,7 +1,6 @@
 import { HttpException, Injectable } from '@nestjs/common';
 import * as admin from 'firebase-admin';
 import { ItemResponseDto } from './show.dtos';
-import { SoldItem } from './show.models';
 
 @Injectable()
 export class ShowService {
@@ -30,10 +29,7 @@ export class ShowService {
       const soldItem = showItemRefDoc.data();
       const quantitySold =
         soldItem === undefined ? 1 : soldItem.quantitySold + 1;
-      t.set(
-        soldItemRef,
-        JSON.parse(JSON.stringify(new SoldItem(itemID, quantitySold))),
-      );
+      t.set(soldItemRef, { itemRef: itemRef, quantitySold: quantitySold });
     });
   }
 
@@ -49,7 +45,7 @@ export class ShowService {
     if (soldItem === undefined) {
       throw new HttpException('Item not found', 404);
     }
-    const refItem = await soldItem.item.get();
+    const refItem = await soldItem.itemRef.get();
     const item = refItem.data();
     return new ItemResponseDto(
       refItem.id,
@@ -68,7 +64,7 @@ export class ShowService {
       .get();
     for (const doc of snapshot.docs) {
       const soldItem = doc.data();
-      const refItem = await soldItem.item.get();
+      const refItem = await soldItem.itemRef.get();
       const item = refItem.data();
       soldItems.push(
         new ItemResponseDto(refItem.id, item.itemName, soldItem.quantitySold),

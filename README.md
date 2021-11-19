@@ -17,13 +17,16 @@
 
 Simple sample of an API built with Node & NestJS & Cloud Firestore.
 
-## ADRs
+## Docs (ADRs)
 
 You can find Architectural Decision Records under [/docs](/docs) folder
 
-## Firebase Crendentials
+## Requirements
 
-Copy the dotenv template and fill the env vars with your own Firebase credentials.
+- Node v16.13.0
+- Setup `dotenv` with your own Firebase Crendentials
+
+Copy the `dotenv.template` and fill the env vars your credentials.
 
 ```bash
 $ cp dotenv.example dotenv
@@ -58,6 +61,13 @@ $ npm run test:e2e
 
 # test coverage
 $ npm run test:cov
+```
+
+### Deploy
+
+```bash
+# deploy Cloud Functions
+$ npm run deploy
 ```
 
 ### Request samples
