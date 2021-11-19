@@ -7,7 +7,7 @@ export class ShowController {
   constructor(private readonly service: ShowService) {}
 
   @Post('/:showID/buy_item/:itemID')
-  async show(
+  async buyItem(
     @Param('showID') showID: string,
     @Param('itemID') itemID: string,
   ): Promise<any> {

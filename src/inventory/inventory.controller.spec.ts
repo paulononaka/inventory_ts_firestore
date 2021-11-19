@@ -1,4 +1,5 @@
 import { InventoryController } from './inventory.controller';
+import { ItemRequestDto } from './inventory.dtos';
 import { InventoryService } from './inventory.service';
 
 describe('InventoryController', () => {
@@ -18,7 +19,7 @@ describe('InventoryController', () => {
         .mockImplementation(() => new Promise((resolve) => resolve(result)));
 
       inventoryController
-        .inventory([{ itemID: '1', itemName: 'Mocked Item 1', quantity: 10 }])
+        .inventory([new ItemRequestDto('1', 'Mocked Item 1', 10)])
         .then((result) => {
           expect(result).toEqual(result);
         });

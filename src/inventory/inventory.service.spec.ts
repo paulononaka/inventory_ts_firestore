@@ -1,5 +1,5 @@
 import { InventoryService } from './inventory.service';
-import * as admin from 'firebase-admin';
+import { mockFirebase } from '../../test/mock-firebase';
 
 describe('InventoryService', () => {
   describe('post inventory', () => {
@@ -9,13 +9,8 @@ describe('InventoryService', () => {
     let collection;
 
     beforeEach(async () => {
-      admin.initializeApp();
       inventoryService = new InventoryService();
-      set = jest.fn();
-      doc = jest.fn(() => ({ set }));
-      collection = jest
-        .spyOn(admin.firestore(), 'collection')
-        .mockReturnValue({ doc } as unknown as any);
+      ({ set, doc, collection } = mockFirebase(set, doc, collection));
     });
 
     it('should return "Ok!"', async () => {
