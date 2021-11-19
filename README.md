@@ -21,6 +21,13 @@ Simple sample of an API built with Node & NestJS & Cloud Firestore.
 
 You can find Architectural Decision Records under [/docs](/docs) folder
 
+## Firebase Crendentials
+
+Copy the dotenv template and fill the env vars with your own Firebase credentials.
+
+```bash
+$ cp dotenv.example dotenv
+```
 ## Installation
 
 ```bash
